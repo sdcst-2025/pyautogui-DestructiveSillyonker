@@ -3,6 +3,12 @@ import time
 import keyboard
 
 
+Chest = 'Chest.png'
+
+Click = 'Click.png'
+
+
+
 Cx = 717
 Cy = 365
 
@@ -29,7 +35,7 @@ time.sleep(1)
 while True:
 
     print("Stimulating...")
-    pyautogui.moveTo(Cx, Cy)    
+    pyautogui.moveTo(pyautogui.locateOnScreen(Click, confidence=0.8))    
     for i in range(100):  
         pyautogui.click()
         
@@ -49,7 +55,7 @@ while True:
         pyautogui.click()
 
     print("Squishing...")
-    for i in range(3):
+    for i in range(2):
         pyautogui.moveTo(Sx, Sy)
         pyautogui.click()
         pyautogui.moveTo(Sx, Sy2)
@@ -58,3 +64,13 @@ while True:
     pyautogui.moveTo(Ux3, Ly)
     pyautogui.click()
 
+    
+
+    pyautogui.moveTo(pyautogui.locateOnScreen(Chest, confidence=0.8))
+    pyautogui.click()
+    
+
+ 
+    
+        
+    
